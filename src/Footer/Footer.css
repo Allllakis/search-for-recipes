@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: black;
+  color: white;
+  height: 66px;
+}
+
+.items {
+  list-style: none;
+  margin-bottom: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.items li {
+  margin-bottom: 0;
+  padding: 8px;
+}
+.footer_link {
+  list-style: none;
+  color: white;
+}
+
+.footer_link:hover,
+.footer_link:active {
+  cursor: pointer;
+  color: #19b84c;
+}

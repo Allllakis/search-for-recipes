@@ -1,0 +1,13 @@
+.HeaderContent {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #2ddf5c;
+    padding: 8px 16px;
+}
+p {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(56, 55, 55);
+}

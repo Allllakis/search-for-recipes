@@ -1,0 +1,44 @@
+.Card {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(213, 255, 220, 0.95);
+    padding: 16px;
+    margin: 8px;
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px #19b84c;
+    border-radius: 15px;
+}
+
+ .CardTitle { 
+  background: white;
+  padding: 8px 16px;
+  color: #19b84c;
+  border-radius: 10px;
+  border: 1px solid  #19b84c;
+  box-shadow: 2px 2px 2px 2px #19b84c;
+ } 
+
+
+.CardImg {
+    border: 1px solid  #d5ffdc;
+  
+}
+.CardCalories {
+    color: #858585;
+    font-weight: bold;
+    padding: 8px;
+}
+
+
+.Ingredients {
+    width: 90%;
+}
+
+.CardIngredient {
+    list-style: none;
+    padding: 4px 0px;
+    color: #0e4f1f;
+    
+}
