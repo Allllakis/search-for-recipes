@@ -1,50 +1,56 @@
-
-
 .form {
-    margin: 16px 0px;
+  display: flex;
+  margin: 1.2rem 0;
+  width: 100%;
+  align-items: center;
+  min-width: 25rem;
+  max-width: 35rem;
+}
+
+@media (min-width: 40rem) {
+  .form {
+    width: 60%;
+  }
 }
 
 .section-search {
-    width: 350px;
-    background: #19b84c;
-   
-    border-radius: 8px;
-    padding: 8px;
-    margin: 8px;
-    border-style: none;
+  width: 80%;
+  background: #19b84c;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-style: none;
 }
 
 .section-search:focus {
-    outline: none;
-
+  outline: none;
 }
 
 .section-search:hover,
 .section-search:active {
-    background: #d5ffdc;
-    box-shadow: 2px 2px 2px 2px #19b84c;
+  background: #d5ffdc;
+  box-shadow: 2px 2px 2px 2px #19b84c;
 }
 
 .button {
-    background: #0e4f1f;
-    color: white;
-    border: 1.5px solid #0e4f1f;
-    border-radius: 8px;
-    padding: 8px;
-    margin: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    border-style: none;
+  width: 20%;
+  background: #0e4f1f;
+  color: white;
+  border: 1.5px solid #0e4f1f;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-style: none;
 }
 
 .button:hover,
- .button:active {
-    background: #d5ffdc;
-    color: #0e4f1f;
-    box-shadow: 2px 2px 2px 2px #19b84c;
+.button:active {
+  background: #d5ffdc;
+  color: #0e4f1f;
+  box-shadow: 2px 2px 2px 2px #19b84c;
 }
 .button:focus {
-    outline: none;
+  outline: none;
 }
-
-

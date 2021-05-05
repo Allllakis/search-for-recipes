@@ -6,7 +6,7 @@ const HeaderContent = () => {
   return (
     <div className={classes.HeaderContent}>
       <img src={img} height={50} width={50} />
-      <p>GASTRONOME</p>
+      <p className={classes.Lable}>GASTRONOME</p>
     </div>
   );
 };
