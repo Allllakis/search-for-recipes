@@ -3,6 +3,8 @@ import axios from "axios";
 
 import Recipe from "./Recipe/Recipe";
 import Layout from "./Layout/Layout";
+import Loader from "react-loader-spinner";
+import ErrorIndicator from "./ErrorIndicator/ErrorIndicator";
 import "./App.css";
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("chicken");
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     axios
@@ -20,7 +24,7 @@ function App() {
       )
       .then((response) => {
         const dataBase = response.data.hits;
-        console.log(dataBase);
+
         const updateDataBase = dataBase.map((datas) => {
           return {
             key: datas.recipe.calories,
@@ -31,11 +35,13 @@ function App() {
           };
         });
         setRecipes(updateDataBase);
-
-        console.log("useEffect");
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(true);
+        setLoading(false);
       });
   }, [query]);
-  console.log("recipes", recipes);
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -46,6 +52,26 @@ function App() {
     setQuery(search);
     setSearch("");
   };
+
+  const spinner = (
+    <Loader type="Puff" color="rgb(240, 191, 76)" height={200} width={200} />
+  );
+
+  const content = recipes.map((recipe) => (
+    <Recipe
+      key={recipe.label}
+      title={recipe.label}
+      image={recipe.image}
+      calories={recipe.calories}
+      ingredients={recipe.ingredients}
+    />
+  ));
+
+  const hasData = !loading && !recipes.length;
+
+  const notValid = <h2 className="error">please enter another label!</h2>;
+
+  const errorMessage = error && hasData ? <ErrorIndicator /> : null;
 
   return (
     <Layout>
@@ -60,16 +86,8 @@ function App() {
           SEARCH
         </button>
       </form>
-
-      {recipes.map((recipe) => (
-        <Recipe
-          key={recipe.label}
-          title={recipe.label}
-          image={recipe.image}
-          calories={recipe.calories}
-          ingredients={recipe.ingredients}
-        />
-      ))}
+      {errorMessage}
+      {!error &&  (loading ? spinner : !!recipes.length ? content : notValid)}
     </Layout>
   );
 }
