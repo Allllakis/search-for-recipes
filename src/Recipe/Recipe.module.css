@@ -3,28 +3,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(213, 255, 220, 0.95);
+  background:  linear-gradient(90deg, #f1f2f2 0%, #c9f1d9 100%);
+  opacity: 0.9;
   padding: 1rem;
   margin: 0.5rem;
   width: 100%;
   border-radius: 15px;
+  border: 1px solid #f3f8f5;
+  box-shadow: 2px 2px 2px 2px #f4f7f5;
   min-width: 20rem;
   max-width: 40rem;
 }
 
+.Card:hover {
+  opacity: 1;
+  /* transform: scale(1.1); */
+}
+
 .CardTitle {
-  background: white;
+  background: #0e4f1f;
+  opacity: 0.8;
   padding: 0.5rem 1rem;
-  color: #19b84c;
+  color: #f1f2f2;
   border-radius: 10px;
-  border: 1px solid #19b84c;
-  box-shadow: 2px 2px 2px 2px #19b84c;
+  border: 1px solid #f3f8f5;
+  box-shadow: 2px 2px 2px 2px #f4f7f5;
   font-size: 1.6rem;
+}
+
+.CardTitle:hover {
+  color: #d8ee89;
 }
 
 .CardImg {
   border: 1px solid #d5ffdc;
+ 
 }
+
+.CardImg:hover {
+  transform: scale(1.1);
+  border-radius: 70%;
+}
+
 .CardCalories {
   color: #858585;
   font-weight: bold;
@@ -36,6 +56,10 @@
   padding: 0;
 }
 
+.Ingredients:hover {
+  transform: scale(1.1);
+}
+
 .CardIngredient {
   list-style: none;
   padding: 0.2rem 0px;
@@ -45,7 +69,7 @@
 @media (min-width: 40rem) {
   .Card {
     width: 60%;
-    box-shadow: 2px 2px 2px 2px #19b84c;
+   
   }
   .CardTitle {
     width: 60%;

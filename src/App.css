@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+
+.find {
+  margin-top: 80px;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #f1f2f2;
+}
+
 .form {
   display: flex;
   margin: 1.2rem 0;
@@ -5,61 +14,68 @@
   align-items: center;
   min-width: 20rem;
   max-width: 35rem;
-  
 }
 
-@media (min-width: 40rem) {
-  .form {
-    width: 60%;
-  }
+.form:hover {
+  transform: scale(1.1);
 }
 
 .section-search {
   width: 70%;
-  background: #19b84c;
+  height: 25px;
+  background: #f1f2f2;
+  opacity: 0.7;
   border-radius: 8px;
   padding: 0.5rem;
   margin: 0.5rem;
   border-style: none;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .section-search:focus {
   outline: none;
 }
 
-.section-search:hover,
-.section-search:active {
-  background: #d5ffdc;
-  box-shadow: 2px 2px 2px 2px #19b84c;
-}
-
 .button {
+  font-family: inherit;
   width: 30%;
   background: #0e4f1f;
   color: white;
   border: 1.5px solid #0e4f1f;
+  opacity: 0.7;
   border-radius: 8px;
   padding: 0.5rem;
   margin: 0.5rem;
   cursor: pointer;
+  font-size: 1rem;
   font-weight: bold;
   border-style: none;
 }
 
 .button:hover,
 .button:active {
-  background: #d5ffdc;
-  color: #0e4f1f;
-  box-shadow: 2px 2px 2px 2px #19b84c;
+  border-radius: 70%;
+  box-shadow: 4px 4px 9px white;
+  color: tomato;
 }
 .button:focus {
   outline: none;
 }
 
 .error {
+  height: auto;
+  width: auto;
+  padding: 1rem;
   background: #d5ffdc;
   border: 2px solid tomato;
   text-align: center;
   font-size: 3rem;
   color: tomato;
+}
+
+@media (min-width: 40rem) {
+  .form {
+    width: 60%;
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderContent from "../HeaderContent/HeaderContent";
-import img from "../Img/Kivi.jpg";
+import img from "../Img/Food.jpg";
 import Footer from "../Footer/Footer";
 
 import classes from "./Layout.module.css";

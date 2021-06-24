@@ -75,6 +75,7 @@ function App() {
 
   return (
     <Layout>
+      <div className="find">Find a Recipe</div>
       <form className="form" onSubmit={getQuery}>
         <input
           className="section-search"
