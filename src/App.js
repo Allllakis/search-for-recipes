@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+// import MenuContext from "antd/lib/menu/MenuContext";
 import Recipe from "./Recipe/Recipe";
 import Layout from "./Layout/Layout";
 import Loader from "react-loader-spinner";
 import ErrorIndicator from "./ErrorIndicator/ErrorIndicator";
+
+
+
 import "./App.css";
 
 function App() {
@@ -88,7 +92,7 @@ function App() {
         </button>
       </form>
       {errorMessage}
-      {!error &&  (loading ? spinner : !!recipes.length ? content : notValid)}
+      {!error && (loading ? spinner : !!recipes.length ? content : notValid)}
     </Layout>
   );
 }

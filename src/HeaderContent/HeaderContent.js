@@ -1,12 +1,18 @@
-import React from "react";
-import classes from "./HeaderContent.module.css";
-// import img from "../Img/logoApple.png";
 
-const HeaderContent = () => {
+import React, { useState } from "react";
+import "./HeaderContent.css";
+
+const HeaderContent = (props) => {
+  const { onMenuActiveHandler } = props;
+  
   return (
-    <div className={classes.HeaderContent}>
-      {/* <img src={img} height={50} width={50} /> */}
-      <p className={classes.Lable}>Gastronome</p>
+    <div className="HeaderContent">
+      <div className="burger-btn" onClick={onMenuActiveHandler}>
+        <div className="dash" />
+        <div className="dash" />
+        <div className="dash" />
+      </div>
+      <p className="Lable">Gastronome</p>
     </div>
   );
 };
