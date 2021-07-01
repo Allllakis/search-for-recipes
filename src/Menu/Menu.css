@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 0 2rem;
   font-size: 1.5rem;
   background-color: #c9f1d9;
@@ -35,17 +35,25 @@
   height: 100%;
   min-width: 25rem;
   transition: all 0.4s;
+  
 }
 
-.menu-content a {
+/* .menu-content a {
   font-family: "Source Serif Pro";
   text-decoration: none;
   list-style: none;
   color: tomato;
-}
-
-/* @media screen and (min-width: 40rem) {
-  .menu-content {
-    width: 60%;
-  }
 } */
+
+.menu-header {
+  font-family: "Source Serif Pro";
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0e4f1f;
+  border-bottom: 2px solid #0e4f1f;
+  width: 100%;
+  padding:  2rem 0;
+  text-align: center;
+  
+
+}
