@@ -7,8 +7,6 @@ import Layout from "./Layout/Layout";
 import Loader from "react-loader-spinner";
 import ErrorIndicator from "./ErrorIndicator/ErrorIndicator";
 
-
-
 import "./App.css";
 
 function App() {
@@ -73,13 +71,15 @@ function App() {
 
   const hasData = !loading && !recipes.length;
 
-  const notValid = <h2 className="error">please enter another label!</h2>;
+  const notValid = <h2 className="error">Please, enter another label!</h2>;
 
   const errorMessage = error && hasData ? <ErrorIndicator /> : null;
 
   return (
     <Layout>
-      <div className="find">Find a Recipe</div>
+      <div className="find">
+        <h1>Find a Recipe</h1>
+      </div>
       <form className="form" onSubmit={getQuery}>
         <input
           className="section-search"

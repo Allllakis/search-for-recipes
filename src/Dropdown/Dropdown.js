@@ -1,25 +1,48 @@
-import React, {useState} from 'react';
-import classes from './Dropdown.module.css';
+import React, { useState } from "react";
+import "./Dropdown.css";
+import items from "../Items/Items";
 
+const Dropdown = () => {
+  const [openedSectionsIds, setOpenedSectionsIds] = useState([]);
 
+  const toggleHandler = (sectionId) => {
+    if (openedSectionsIds.includes(sectionId)) {
+      setOpenedSectionsIds((prevState) =>
+        prevState.filter((item) => item !== sectionId)
+      );
+    } else {
+      setOpenedSectionsIds((prevState) => [...prevState, sectionId]);
+    }
+  };
 
-const Dropdown = ({items}) => {
-const [open, setOpen] = useState(false);
-
-return (
-    <div className={classes.menu}>
-        {items.map(item => {
-            <h2 >{item.name}</h2>
-            console.log(item.name)
-        })}
+  return (
+    <div className="dropdown">
+      {items.map((item) => {
+        return (
+          <div className="wrapper" key={item.id}>
+            <h2 className="dropheader" onClick={() => toggleHandler(item.id)}>
+              {item.name}
+            </h2>
+            <div className="dropcontent">
+              {item.title.map((dropitem, index) => {
+                return (
+                  <a
+                    href="#"
+                    key={index}
+                    className={
+                      openedSectionsIds.includes(item.id) ? "dropitem" : "hide"
+                    }
+                  >
+                    {dropitem}
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
     </div>
-)
-    
-
-}  
-
-
-
-
+  );
+};
 
 export default Dropdown;

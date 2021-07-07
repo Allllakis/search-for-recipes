@@ -2,7 +2,7 @@
 
 .menu {
   position: fixed;
-  min-width: 25rem;
+  min-width: 98vw;
   height: 100vh;
   top: 80px;
   left: 0;
@@ -19,8 +19,7 @@
   width: 75vw;
   height: 100vh;
   left: 25rem;
-
-  backdrop-filter: blur(2px)
+  backdrop-filter: blur(2px);
 }
 
 .menu-content {
@@ -33,17 +32,9 @@
   background-color: #c9f1d9;
   opacity: 0.9;
   height: 100%;
-  min-width: 25rem;
+  width: 85vw;
   transition: all 0.4s;
-  
 }
-
-/* .menu-content a {
-  font-family: "Source Serif Pro";
-  text-decoration: none;
-  list-style: none;
-  color: tomato;
-} */
 
 .menu-header {
   font-family: "Source Serif Pro";
@@ -52,8 +43,12 @@
   color: #0e4f1f;
   border-bottom: 2px solid #0e4f1f;
   width: 100%;
-  padding:  2rem 0;
+  padding: 2rem 0;
   text-align: center;
-  
+}
 
+@media (min-width: 64rem) {
+  .menu-content {
+    width: 35vw;
+  }
 }

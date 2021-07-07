@@ -1,10 +1,11 @@
+import React from "react";
 
-import React, { useState } from "react";
 import "./HeaderContent.css";
+import HeaderItems from "../HeaderItems/HeaderItems";
 
 const HeaderContent = (props) => {
-  const { onMenuActiveHandler } = props;
-  
+  const { onMenuActiveHandler} = props;
+
   return (
     <div className="HeaderContent">
       <div className="burger-btn" onClick={onMenuActiveHandler}>
@@ -12,7 +13,7 @@ const HeaderContent = (props) => {
         <div className="dash" />
         <div className="dash" />
       </div>
-      <p className="Lable">Gastronome</p>
+      <HeaderItems />
     </div>
   );
 };
