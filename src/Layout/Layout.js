@@ -17,6 +17,8 @@ const Layout = (props) => {
       <HeaderContent onMenuActiveHandler={MenuActiveHandler} />
       <main
         style={{
+          width: "100%" ,
+          height: "100vh",
           background: `url(${img})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",

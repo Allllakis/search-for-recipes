@@ -7,7 +7,7 @@ const Recipe = ({ title, calories, image, ingredients }) => {
       <h1 className={classes.CardTitle}>{title}</h1>
       <img className={classes.CardImg} src={image} alt="" />
       <p className={classes.CardCalories}>
-        calorie of the dish {calories} Kcal
+        calorie of the dish {calories} KJ
       </p>
       <ul className={classes.Ingredients}>
         {ingredients.map((ingredient, index) => (

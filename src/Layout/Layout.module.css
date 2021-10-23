@@ -6,7 +6,7 @@
 }
 
 .Content {
-   padding: 10rem; 
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,12 +64,11 @@
 
 .Lable:hover,
 .Lable:active {
- 
   color: #d8ee89;
 }
 
-@media (min-width: 40rem) {
+/* @media (min-width: 40rem) {
   .Lable {
     font-size: 2.5rem;
   }
-}
+} */
