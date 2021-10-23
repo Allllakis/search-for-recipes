@@ -2,16 +2,21 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .Content {
+<<<<<<< HEAD
   padding: 5rem 0;
+=======
+  padding: 4rem;
+>>>>>>> d406594972a626a942b67d18969f134aebfd8d83
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+<<<<<<< HEAD
 /* .HeaderContent {
   font-size: 1.6rem;
   font-family: "Source Serif Pro";
@@ -72,3 +77,6 @@
     font-size: 2.5rem;
   }
 } */
+=======
+
+>>>>>>> d406594972a626a942b67d18969f134aebfd8d83

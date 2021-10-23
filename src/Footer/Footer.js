@@ -4,7 +4,6 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-     
       <ul className="items">
         <li>
           <a className="footer_link" href="#">
@@ -17,7 +16,6 @@ const Footer = () => {
           </a>
         </li>
       </ul>
-     
     </div>
   );
 };

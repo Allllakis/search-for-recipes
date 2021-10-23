@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
+
 .footer {
   display: flex;
   justify-content: center;
@@ -9,6 +11,7 @@
 }
 
 .items {
+  font-family: "Source Serif Pro";
   list-style: none;
   margin: 0px;
   padding: 0px;

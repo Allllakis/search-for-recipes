@@ -1,10 +1,15 @@
-
 import React from "react";
+
+<<<<<<< HEAD
+import React from "react";
+=======
+>>>>>>> d406594972a626a942b67d18969f134aebfd8d83
 import "./HeaderContent.css";
+import HeaderItems from "../HeaderItems/HeaderItems";
 
 const HeaderContent = (props) => {
-  const { onMenuActiveHandler } = props;
-  
+  const { onMenuActiveHandler} = props;
+
   return (
     <div className="HeaderContent">
       <div className="burger-btn" onClick={onMenuActiveHandler}>
@@ -12,7 +17,7 @@ const HeaderContent = (props) => {
         <div className="dash" />
         <div className="dash" />
       </div>
-      <p className="Lable">Gastronome</p>
+      <HeaderItems />
     </div>
   );
 };
