@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./HeaderContent.css";
 
+import pageLinks from "../Links/pageLinks"
+
 const HeaderContent = (props) => {
-  const { onMenuActiveHandler } = props;
+  const { onMenuActiveHandler,onLabelClick, label } = props;
   
   return (
     <div className="HeaderContent">
@@ -10,6 +12,16 @@ const HeaderContent = (props) => {
         <div className="dash" />
         <div className="dash" />
         <div className="dash" />
+      </div>
+      <div className="nav-links">
+      {pageLinks.map(link => {
+            return (
+              <a key={link.id} onClick={onLabelClick}>
+                {link.name}
+                {label}
+              </a>
+            )
+          })}
       </div>
       <p className="Lable">Gastronome</p>
     </div>

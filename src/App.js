@@ -28,7 +28,7 @@ function App() {
       )
       .then((response) => {
         const dataBase = response.data.hits;
-
+        console.log(dataBase)
         const updateDataBase = dataBase.map((datas) => {
           return {
             key: datas.recipe.calories,
@@ -58,8 +58,9 @@ function App() {
   };
 
   const spinner = (
-    <Loader type="Puff" color="rgb(240, 191, 76)" height={200} width={200} />
+    <Loader type="Puff" color="rgba(184, 184, 33)" height={200} width={200} />
   );
+  console.log(recipes)
 
   const content = recipes.map((recipe) => (
     <Recipe

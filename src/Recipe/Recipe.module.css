@@ -13,10 +13,12 @@
   box-shadow: 2px 2px 2px 2px #f4f7f5; */
   min-width: 20rem;
   max-width: 40rem;
+  transition: all 0.3s linear;
 }
 
 .Card:hover {
   opacity: 1;
+  transition: all 0.3s linear;
 }
 
 .CardTitle {
@@ -28,20 +30,25 @@
   /* border: 1px solid #f3f8f5;
   box-shadow: 2px 2px 2px 2px #f4f7f5; */
   font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  transition: all 0.3s linear;
 }
 
 .CardTitle:hover {
   color: #d8ee89;
+  transition: all 0.3s linear;
 }
 
 .CardImg {
   border: 1px solid #d5ffdc;
   border-radius: 70%;
+  transition: all 0.3s linear;
 }
 
 .CardImg:hover {
   transform: scale(1.1);
   border-radius: 0;
+  transition: all 0.3s linear;
 }
 
 .CardCalories {
@@ -53,10 +60,12 @@
 .Ingredients {
   width: 90%;
   padding: 0;
+  transition: all 0.3s linear;
 }
 
 .Ingredients:hover {
   transform: scale(1.1);
+  transition: all 0.3s linear;
 }
 
 .CardIngredient {

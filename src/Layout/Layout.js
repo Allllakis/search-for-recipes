@@ -7,6 +7,7 @@ import Menu from "../Menu/Menu";
 import classes from "./Layout.module.css";
 
 const Layout = (props) => {
+
   const [menuActive, setMenuActive] = useState(false);
 
   const MenuActiveHandler = () => {

@@ -4,10 +4,13 @@
   margin-top: 72px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.3rem;
   font-size: 3rem;
+  text-align: center;
   font-weight: 500;
-  /* color: #f1f2f2; */
-  color: tomato;
+  color: #f1f2f2;
+  background-color: rgba(184, 184, 33, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form {
@@ -17,6 +20,7 @@
   align-items: center;
   min-width: 20rem;
   max-width: 35rem;
+  transition: all 0.3s linear;
 }
 
 
@@ -31,11 +35,14 @@
   margin: 0.5rem;
   border-style: none;
   font-size: 1.5rem;
+  
   font-weight: 500;
+  transition: all 0.3s linear;
 }
 
 .section-search:focus {
   outline: none;
+  transition: all 0.3s linear;
 }
 
 .button {
@@ -52,15 +59,19 @@
   font-size: 1rem;
   font-weight: bold;
   border-style: none;
+  transition: all 0.3s linear;
+  letter-spacing: 0.2rem;
 }
 
 .button:hover,
 .button:active {
   border-radius: 70%;
   color: tomato;
+  transition: all 0.3s linear;
 }
 .button:focus {
   outline: none;
+  transition: all 0.3s linear;
 }
 
 .error {
@@ -82,8 +93,10 @@
   }
   .form {
     width: 60%;
+    transition: all 0.3s linear;
   }
   .form:hover {
     transform: scale(1.1);
+    transition: all 0.3s linear;
   }
 }
