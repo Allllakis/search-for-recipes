@@ -1,35 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
 
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: rgb(51, 51, 51);
-  color: white;
+
+.page-footer {
+  text-align: center;
   height: 4rem;
-}
-
-.items {
-  font-family: "Source Serif Pro";
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  color: #fff;
 }
-
-.items li {
+.page-footer h5 {
   margin-bottom: 0;
-  padding: 0.5rem;
 }
-.footer_link {
-  text-decoration: none;
-  list-style: none;
-  color: white;
+.page-footer p {
+  margin-bottom: 0;
 }
-
-.footer_link:hover,
-.footer_link:active {
-  cursor: pointer;
-  color: #19b84c;
+.page-footer span,
+.page-footer a {
+  color:  tomato;
 }

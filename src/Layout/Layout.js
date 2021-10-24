@@ -12,7 +12,6 @@ const Layout = (props) => {
   const MenuActiveHandler = () => {
     setMenuActive(!menuActive);
   };
-
   return (
     <div className={classes.Layout}>
       <HeaderContent onMenuActiveHandler={MenuActiveHandler} />
