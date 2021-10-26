@@ -1,24 +1,16 @@
-import React, { useState } from "react";
-import HeaderContent from "../HeaderContent/HeaderContent";
+import React from "react";
+
 import img from "../Img/Food.jpg";
 import Footer from "../Footer/Footer";
-import Menu from "../Menu/Menu";
 
 import classes from "./Layout.module.css";
 
 const Layout = (props) => {
-
-  const [menuActive, setMenuActive] = useState(false);
-
-  const MenuActiveHandler = () => {
-    setMenuActive(!menuActive);
-  };
   return (
     <div className={classes.Layout}>
-      <HeaderContent onMenuActiveHandler={MenuActiveHandler} />
       <main
         style={{
-          width: "100%" ,
+          width: "100%",
           height: "100vh",
           background: `url(${img})`,
           backgroundSize: "cover",
@@ -30,7 +22,7 @@ const Layout = (props) => {
       >
         {props.children}
       </main>
-      <Menu active={menuActive} setActive={setMenuActive} />
+
       <Footer />
     </div>
   );

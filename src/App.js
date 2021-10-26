@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-// import MenuContext from "antd/lib/menu/MenuContext";
 import Recipe from "./Recipe/Recipe";
 import Layout from "./Layout/Layout";
 import Loader from "react-loader-spinner";
 import ErrorIndicator from "./ErrorIndicator/ErrorIndicator";
-
-
+import HeaderContent from "./HeaderContent/HeaderContent";
+import Menu from "./Menu/Menu";
 
 import "./App.css";
 
@@ -21,6 +20,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  const [menuActive, setMenuActive] = useState(false);
+
+  const MenuActiveHandler = () => {
+    setMenuActive(!menuActive);
+  };
+
   useEffect(() => {
     axios
       .get(
@@ -28,7 +33,7 @@ function App() {
       )
       .then((response) => {
         const dataBase = response.data.hits;
-        console.log(dataBase)
+        console.log(dataBase);
         const updateDataBase = dataBase.map((datas) => {
           return {
             key: datas.recipe.calories,
@@ -48,7 +53,7 @@ function App() {
   }, [query]);
 
   const updateSearch = (e) => {
-    setSearch(e.target.value);
+    return setSearch(e.target.value);
   };
 
   const getQuery = (e) => {
@@ -60,7 +65,6 @@ function App() {
   const spinner = (
     <Loader type="Puff" color="rgba(184, 184, 33)" height={200} width={200} />
   );
-  console.log(recipes)
 
   const content = recipes.map((recipe) => (
     <Recipe
@@ -79,22 +83,33 @@ function App() {
   const errorMessage = error && hasData ? <ErrorIndicator /> : null;
 
   return (
-    <Layout>
-      <div className="find">Find a Recipe</div>
-      <form className="form" onSubmit={getQuery}>
-        <input
-          className="section-search"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-        ></input>
-        <button className="button" type="submit">
-          SEARCH
-        </button>
-      </form>
-      {errorMessage}
-      {!error && (loading ? spinner : !!recipes.length ? content : notValid)}
-    </Layout>
+    <>
+      <HeaderContent
+        onMenuActiveHandler={MenuActiveHandler}
+        onNavClick={(query) => setQuery(query)}
+      />
+      <Layout>
+        <div className="find">Find a Recipe</div>
+        <form className="form" onSubmit={getQuery}>
+          <input
+            className="section-search"
+            type="text"
+            value={search}
+            onChange={updateSearch}
+          ></input>
+          <button className="button" type="submit">
+            SEARCH
+          </button>
+        </form>
+        {errorMessage}
+        {!error && (loading ? spinner : !!recipes.length ? content : notValid)}
+      </Layout>
+      <Menu
+        active={menuActive}
+        setActive={setMenuActive}
+        onNavClick={(query) => setQuery(query)}
+      />
+    </>
   );
 }
 
