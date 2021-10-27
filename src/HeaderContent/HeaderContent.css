@@ -69,21 +69,22 @@
     margin-right: 3rem;
   }
 
-  .nav-links a {
+  .nav-links li {
     margin-right: 2rem;
     text-transform: capitalize;
     color: azure;
     letter-spacing: 0.15rem;
     transition: all 0.3s linear;
     padding: 0.5rem 0;
+    list-style: none;
   }
-  .nav-links a:hover {
+  .nav-links li:hover {
     color: tomato;
     box-shadow: 0px 2px tomato;
     transition: all 0.3s linear;
   }
   .Lable {
     font-size: 2rem;
-    /* margin-left: 2rem; */
+   
   }
 }

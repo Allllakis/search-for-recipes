@@ -31,13 +31,13 @@ const Menu = ({ active, setActive, onNavClick }) => {
                 {item.name}
                 {isOpen
                   ? item.title.map((elem, index) => (
-                      <a
+                      <li
                         key={index}
                         className="elem-active"
                         onClick={() => onNavClick(elem)}
                       >
                         {elem}
-                      </a>
+                      </li>
                     ))
                   : ""}
               </li>

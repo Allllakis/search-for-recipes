@@ -13,16 +13,16 @@ const HeaderContent = (props) => {
         <div className="dash" />
         <div className="dash" />
       </div>
-      <div className="nav-links">
+      <ul className="nav-links">
         {items.map((link) => {
           return (
-            <a key={link.id} onClick={() => onNavClick(link.name)}>
+            <li key={link.id} onClick={() => onNavClick(link.name)}>
               {link.name}
               {label}
-            </a>
+            </li>
           );
         })}
-      </div>
+      </ul>
       <p className="Lable">Gastronome</p>
     </div>
   );
