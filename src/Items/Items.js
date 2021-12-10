@@ -7,7 +7,7 @@ const items = [
   },
   {
     id: 2,
-    name: "Type Dish",
+    name: "Dish",
     title: [
       "Bread",
       "Drinks",
@@ -24,7 +24,7 @@ const items = [
   },
   {
     id: 3,
-    name: "Cuisine Types",
+    name: "Cuisine",
     title: [
       "American",
       "Asian",
@@ -40,7 +40,7 @@ const items = [
   },
   {
     id: 4,
-    name: "Meal Types",
+    name: "Meal",
     title: ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"],
   },
 ];
